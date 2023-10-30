@@ -1,4 +1,5 @@
-from Streamer import Streamer
+from entitie.Streamer import Streamer
+
 class Factory:
 
     def __init__(self, parser) -> None:
@@ -11,7 +12,7 @@ class Factory:
         game = self.parser['game']
         status = self.parser['status']
         if (status == None):
-            return Streamer(title, views, game, "Offiline")
+            return Streamer(title, views, game, "Offline")
         return Streamer(title, views, game, status)
         
 
